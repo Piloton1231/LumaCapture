@@ -4,6 +4,8 @@
 
 # LumaCapture
 
+[**Windows版をダウンロード（v0.12.1）**](https://github.com/Piloton1231/LumaCapture/releases/tag/v0.12.1)
+
 Version 0.12.1 fixes settings being blocked when the application-audio selection is empty, preserves offline audio selections, and supports microphone-only recording. Version 0.12 introduced the simplified dashboard and Windows-session shutdown handling. See RELEASE-0.12.md for details.
 
 LumaCapture は、LumaScreenshot と同じダークUI・常駐操作を採用した Windows 10/11 向け画面録画アプリです。通常録画、アプリ別音声、直前クリップ、容量保護をローカルで行います。
@@ -74,3 +76,4 @@ LumaCapture は、LumaScreenshot と同じダークUI・常駐操作を採用し
 - アプリ単位音声: [Microsoft Application Loopback Audio Capture API](https://learn.microsoft.com/windows/win32/api/audioclientactivationparams/ne-audioclientactivationparams-process_loopback_mode)
 - 音声処理: NAudio（MIT）
 - 映像処理: FFmpeg（同梱ビルドのライセンスは `THIRD-PARTY-NOTICES.md` を参照）
+
