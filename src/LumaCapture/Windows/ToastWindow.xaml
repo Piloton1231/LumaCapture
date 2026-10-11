@@ -1,0 +1,11 @@
+<Window x:Class="LumaCapture.Windows.ToastWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Width="405" SizeToContent="Height" WindowStyle="None" AllowsTransparency="True" Background="Transparent" ShowInTaskbar="False" Topmost="True" ShowActivated="False">
+    <Border Background="#F2151821" BorderBrush="#3B4254" BorderThickness="1" CornerRadius="14" Padding="16">
+        <Border.Effect><DropShadowEffect BlurRadius="22" ShadowDepth="5" Opacity="0.45"/></Border.Effect>
+        <Grid><Grid.ColumnDefinitions><ColumnDefinition Width="42"/><ColumnDefinition Width="*"/></Grid.ColumnDefinitions>
+            <Border x:Name="StatusCircle" Width="30" Height="30" CornerRadius="15" Background="#55E08C" VerticalAlignment="Top"><TextBlock x:Name="StatusGlyph" Text="✓" FontSize="17" FontWeight="Bold" Foreground="#10131A" HorizontalAlignment="Center" VerticalAlignment="Center"/></Border>
+            <StackPanel Grid.Column="1"><TextBlock x:Name="TitleText" FontWeight="SemiBold" FontSize="14" TextWrapping="Wrap"/><TextBlock x:Name="MessageText" Foreground="#AAB2C2" FontSize="12" Margin="0,4,0,0" TextWrapping="Wrap" MaxHeight="66"/></StackPanel>
+        </Grid>
+    </Border>
+</Window>

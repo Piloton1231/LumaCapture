@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows10.0.19041.0</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <NoWarn>$(NoWarn);WFO0003</NoWarn>
+    <AssemblyName>LumaCapture</AssemblyName>
+    <RootNamespace>LumaCapture</RootNamespace>
+    <Version>0.12.1</Version>
+    <Authors>LumaCapture</Authors>
+    <Description>Fast, local screen recording and instant replay for Windows.</Description>
+    <PublishSingleFile>true</PublishSingleFile>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PlatformTarget>x64</PlatformTarget>
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <PublishTrimmed>false</PublishTrimmed>
+    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <IncludeAllContentForSelfExtract>false</IncludeAllContentForSelfExtract>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NAudio" Version="3.0.0-preview.19" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(EmbedFfmpeg)' == 'true'">
+    <EmbeddedResource Include="Tools\ffmpeg.exe" LogicalName="LumaCapture.Tools.ffmpeg.exe" />
+    <EmbeddedResource Include="Tools\FFmpeg-LICENSE.txt" LogicalName="LumaCapture.FFmpeg-LICENSE.txt" />
+    <EmbeddedResource Include="..\..\THIRD-PARTY-NOTICES.md" LogicalName="LumaCapture.THIRD-PARTY-NOTICES.md" />
+  </ItemGroup>
+</Project>

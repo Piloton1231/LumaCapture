@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+artifacts/
+ui-review/
+.vs/
+*.user
+*.log
+*.mp4
+*.mkv
+*.wav
+src/LumaCapture/Tools/*.exe
